@@ -1,6 +1,7 @@
 package com.example.root.notifyapp;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -16,6 +17,11 @@ public class HelperActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         ctx=this;
+        setContentView(R.layout.coustomnotification);
+        NotificationManager notificationmanager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        // Dismiss Notification
+        notificationmanager.cancel(0);
+        Toast.makeText(getBaseContext(),"I'm in onCreate!!!",Toast.LENGTH_LONG).show();
 
 
 

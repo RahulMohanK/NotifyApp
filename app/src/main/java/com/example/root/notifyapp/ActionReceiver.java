@@ -16,8 +16,8 @@ public class ActionReceiver extends BroadcastReceiver {
 
         //Toast.makeText(context,"recieved",Toast.LENGTH_SHORT).show();
 
-        String action=intent.getStringExtra("action");
-        if(action.equals("action1")){
+        //String action=intent.getStringExtra("action");
+        //if(action.equals("action1")){
 
              /*SharedPreferences sp = getSharedPreferences("prev", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sp.edit();
@@ -32,6 +32,7 @@ public class ActionReceiver extends BroadcastReceiver {
             editor.putString("prev",text);
 
             editor.apply();*/
+        myDb = new DatabaseHelper(context);
 
             if (!text.equals("")) {
 
@@ -56,11 +57,11 @@ public class ActionReceiver extends BroadcastReceiver {
                     Toast.makeText(context, "Clipboard is empty.", Toast.LENGTH_SHORT).show();
 
             }
-        }
-        else if(action.equals("action2")){
-            performAction2();
 
-        }
+        //else if(action.equals("action2")){
+         //   performAction2();
+
+        //}
         //This is used to close the notification tray
         Intent it = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
         context.sendBroadcast(it);

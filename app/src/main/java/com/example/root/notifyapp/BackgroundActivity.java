@@ -51,7 +51,7 @@ public class BackgroundActivity extends AppCompatActivity {
         listenItems = new ArrayList<>();
 
 
-        insertData();
+        //insertData();
         showData();
 
 
